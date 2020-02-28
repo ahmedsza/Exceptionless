@@ -1,24 +1,35 @@
 # making the assumption that this is running from Azure Shell
+# delete Exceptionless diretory if it exists. Make sure there is nothing important there
+
+# run these 3 command from Azure Cloud shell first. Make sure you are the right Azure subscription
+rm -rf Exceptionless
+
+# clone the forked repo, and then cd into that directory
+git clone https://github.com/ahmedsza/Exceptionless.git 
+cd Exceptionless/k8s
+
+
+
+
 
 
 ---- start install
 # Helm 3 should be installed on Azure cloud shell. This should not be required
 # I had a stange situation where it was not installed in one instance,
 # Had to run this script - and then need to change all references from helm to helm3
+# run helm version. If not v3 then uncomment
 
-helmFile='helm-v3.0.0-linux-amd64.tar.gz'
-curl https://get.helm.sh/$helmFile --output $helmFile
-tar -xvf $helmFile
-mkdir ~/tools
-mv linux-amd64/helm ~/tools/helm3
-rm $helmFile
-rm -r linux-amd64
-echo 'export PATH=$PATH:~/tools' >> ~/.bashrc && source ~/.bashrc
+#helmFile='helm-v3.0.0-linux-amd64.tar.gz'
+#curl https://get.helm.sh/$helmFile --output $helmFile
+#tar -xvf $helmFile
+#mkdir ~/tools
+#mv linux-amd64/helm ~/tools/helm3
+#rm $helmFile
+#rm -r linux-amd64
+#echo 'export PATH=$PATH:~/tools' >> ~/.bashrc && source ~/.bashrc
 
 
 
-
---- helm 3 installed
 
 # set these variables
 
@@ -45,11 +56,6 @@ helm repo add jetstack https://charts.jetstack.io
 helm repo update
 
 # delete any current Exceptionless directory should it exist
-rm -rf Exceptionless
-
-# clone the forked repo, and then cd into that directory
-git clone https://github.com/ahmedsza/Exceptionless.git 
-cd Exceptionless/k8s
 
 
 #create Azure resource group
