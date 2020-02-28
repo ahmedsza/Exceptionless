@@ -7,6 +7,7 @@ The purpose of this fork was to setup a POC environment to get Exceptionless run
 In order to get this working, check out the ex-poc-setup.sh file. 
 
 You will need to do this run these command first
+
 rm -rf Exceptionless
 
 git clone https://github.com/ahmedsza/Exceptionless.git 
