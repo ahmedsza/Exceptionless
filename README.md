@@ -1,4 +1,4 @@
-# Exceptionless
+# Exceptionless AKS POC
 Please refer to the official Exceptionless repo for details - https://github.com/exceptionless/Exceptionless
 
 The purpose of this fork was to setup a POC environment to get Exceptionless running in AKS
