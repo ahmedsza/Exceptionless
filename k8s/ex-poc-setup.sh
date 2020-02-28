@@ -2,11 +2,11 @@
 # delete Exceptionless diretory if it exists. Make sure there is nothing important there
 
 # run these 3 command from Azure Cloud shell first. Make sure you are the right Azure subscription
-rm -rf Exceptionless
+#rm -rf Exceptionless
 
 # clone the forked repo, and then cd into that directory
-git clone https://github.com/ahmedsza/Exceptionless.git 
-cd Exceptionless/k8s
+# git clone https://github.com/ahmedsza/Exceptionless.git 
+# cd Exceptionless/k8s
 
 
 
